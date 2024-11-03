@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bs3h1wgkxdsh7"]
+
+[node name="Shop" type="Node2D"]
+
+[node name="Devices" type="Node2D" parent="."]
+
+[node name="Ingredients" type="Node2D" parent="."]
+
+[node name="Recipes" type="Node2D" parent="."]

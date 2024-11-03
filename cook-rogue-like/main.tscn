@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bjoah4nrulwtq"]
+
+[node name="Main" type="Node"]
+
+[node name="Character HUD" type="CanvasLayer" parent="."]

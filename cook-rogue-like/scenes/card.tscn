@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://busxp84q0jr55"]
+
+[ext_resource type="Script" path="res://scripts/gui/CardGUI.gd" id="1_n661w"]
+[ext_resource type="Texture2D" uid="uid://bqvwnayuiqi2s" path="res://assets/cardbase/vegcard.png" id="2_2inmk"]
+[ext_resource type="Texture2D" uid="uid://cihwxdag258ji" path="res://assets/cardbase/cardback.png" id="2_glh6e"]
+[ext_resource type="Texture2D" uid="uid://t4oauetpseyb" path="res://assets/cardbase/cost.png" id="3_fn4j6"]
+[ext_resource type="Texture2D" uid="uid://dlggriiq0vyr3" path="res://assets/ingredients/lettuce.png" id="4_cr3vn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s2ap2"]
+font_color = Color(0.980392, 0.956863, 0.827451, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7qdyr"]
+font_color = Color(0.980392, 0.956863, 0.827451, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eh4lq"]
+size = Vector2(33.875, 46.875)
+
+[node name="Card" type="Node2D"]
+script = ExtResource("1_n661w")
+
+[node name="CardBackSprite" type="Sprite2D" parent="."]
+show_behind_parent = true
+scale = Vector2(0.995872, 1)
+texture = ExtResource("2_glh6e")
+
+[node name="BackgroundSprite" type="Sprite2D" parent="."]
+show_behind_parent = true
+scale = Vector2(1.029, 1)
+texture = ExtResource("2_2inmk")
+
+[node name="ImageDisplay" type="Node2D" parent="."]
+texture_filter = 1
+position = Vector2(0.65, -1.85)
+
+[node name="ImageSprite" type="Sprite2D" parent="ImageDisplay"]
+scale = Vector2(1.00741, 0.988095)
+texture = ExtResource("4_cr3vn")
+
+[node name="CostDisplay" type="Node2D" parent="."]
+position = Vector2(17.5, -24)
+
+[node name="CostSprite" type="Sprite2D" parent="CostDisplay"]
+texture = ExtResource("3_fn4j6")
+
+[node name="CostLabel" type="Label" parent="CostDisplay"]
+offset_left = -2.0
+offset_top = -3.0
+offset_right = 8.0
+offset_bottom = 20.0
+scale = Vector2(0.440004, 0.267955)
+text = "0"
+label_settings = SubResource("LabelSettings_s2ap2")
+
+[node name="NameDisplay" type="Node2D" parent="."]
+position = Vector2(-13, -20)
+
+[node name="NameLabel" type="Label" parent="NameDisplay"]
+offset_right = 47.0
+offset_bottom = 23.0
+scale = Vector2(0.564139, 0.296095)
+text = "Name"
+label_settings = SubResource("LabelSettings_s2ap2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DescriptionDisplay" type="Node2D" parent="."]
+position = Vector2(-13, 11)
+
+[node name="DescriptionLabel" type="Label" parent="DescriptionDisplay"]
+offset_right = 90.0
+offset_bottom = 23.0
+scale = Vector2(0.299, 0.399393)
+text = "Description"
+label_settings = SubResource("LabelSettings_7qdyr")
+
+[node name="CardClickArea" type="Area2D" parent="."]
+
+[node name="CardClickCollision" type="CollisionShape2D" parent="CardClickArea"]
+position = Vector2(-0.0625, -0.0625)
+shape = SubResource("RectangleShape2D_eh4lq")

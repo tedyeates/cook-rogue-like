@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwel6h7sv36e4"]
+
+[ext_resource type="Script" path="res://scripts/gui/PlayerGUI.gd" id="1_tyil6"]
+[ext_resource type="Texture2D" uid="uid://c63hb6ytjwwhp" path="res://assets/cardbase/stats.png" id="2_n5g3o"]
+
+[node name="PlayerHUD" type="Node"]
+script = ExtResource("1_tyil6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Money" type="Node2D" parent="CanvasLayer"]
+position = Vector2(1763, 66)
+scale = Vector2(8, 8)
+
+[node name="MoneyBaseSprite" type="Sprite2D" parent="CanvasLayer/Money"]
+texture = ExtResource("2_n5g3o")
+
+[node name="MoneyLabel" type="Label" parent="CanvasLayer/Money"]
+offset_left = -16.0
+offset_top = -5.625
+offset_right = 24.0
+offset_bottom = 17.375
+scale = Vector2(0.77955, 0.457146)
+text = "$0
+"
+horizontal_alignment = 1
+
+[node name="Hand" type="Node2D" parent="CanvasLayer"]
+position = Vector2(200, 840)
+scale = Vector2(5, 5)

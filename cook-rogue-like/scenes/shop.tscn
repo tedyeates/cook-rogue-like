@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs3h1wgkxdsh7"]
+
+[ext_resource type="Script" path="res://scripts/gui/ShopGUI.gd" id="1_w2mdu"]
+
+[node name="Shop" type="GridContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+script = ExtResource("1_w2mdu")
+
+[node name="Ingredients" type="HFlowContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Equipment" type="HFlowContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Devices" type="HFlowContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Recipes" type="HFlowContainer" parent="."]
+layout_mode = 2
